@@ -5,7 +5,8 @@ metadata:
 spec:
   containers:
   - name: main
-    image: ghcr.io/jungminii/downward_api:latest
+    image: ghcr.io/jungminii/downward_api:master
+
     imagePullPolicy: Always
     env:
     - name: POD_NAME
