@@ -3,11 +3,12 @@ kind: Pod
 metadata:
   name: downward-env
 spec:
+  containers:
+    - name: main
+      image: ghcr.io/jungminii/downward_api:master
+      # other configuration details
   imagePullSecrets:
-  - name: regcred
-    image: ghcr.io/jungminii/downward_api:master
-
-    imagePullPolicy: Always
+    - name: regcred
     env:
     - name: POD_NAME
       valueFrom:
