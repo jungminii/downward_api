@@ -8,7 +8,7 @@ spec:
       image: ghcr.io/jungminii/downward_api:master
       # other configuration details
   imagePullSecrets:
-    - name: ${{ secrets.GHCR_PAT }}
+    - name: regcred
     env:
     - name: POD_NAME
       valueFrom:
